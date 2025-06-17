@@ -1,0 +1,92 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-06-17T12:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:2025.6.0",
+  "resources": [
+    {
+      "_id": "wrk_users_api",
+      "_type": "workspace",
+      "name": "Моё API",
+      "description": ""
+    },
+    {
+      "_id": "fld_users",
+      "_type": "request_group",
+      "parentId": "wrk_users_api",
+      "name": "endpoints"
+    },
+    {
+      "_id": "req_get_all",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "get all",
+      "method": "GET",
+      "url": "http://localhost:3000/api/users"
+    },
+    {
+      "_id": "req_get_by_id",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "get by id",
+      "method": "GET",
+      "url": "http://localhost:3000/api/users",
+      "parameters": [
+        {
+          "name": "id",
+          "value": "",
+          "description": "User ID",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "_id": "req_create",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "create user",
+      "method": "POST",
+      "url": "http://localhost:3000/api/users",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Артур Пирожков\",\n  \"email\": \"test@example.com\",\n  \"age\": 30,\n  \"department\": \"Барыга\",\n  \"salary\": 50000\n}"
+      }
+    },
+    {
+      "_id": "req_update",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "update user",
+      "method": "PUT",
+      "url": "http://localhost:3000/api/users",
+      "parameters": [
+        {
+          "name": "id",
+          "value": "",
+          "description": "User ID",
+          "disabled": false
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Артур Пирожков\",\n  \"email\": \"fg73gf3@example.com\",\n  \"age\": 28,\n  \"department\": \"Логист\",\n  \"salary\": 55000\n}"
+      }
+    },
+    {
+      "_id": "req_delete",
+      "_type": "request",
+      "parentId": "fld_users",
+      "name": "delete user",
+      "method": "DELETE",
+      "url": "http://localhost:3000/api/users",
+      "parameters": [
+        {
+          "name": "id",
+          "value": "",
+          "description": "User ID",
+          "disabled": false
+        }
+      ]
+    }
+  ]
+}
