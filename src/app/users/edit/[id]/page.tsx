@@ -22,7 +22,7 @@ export default function EditUserPage() {
         console.error("Ошибка при загрузке пользователя:", err);
         router.back();
       });
-  }, [id]);
+  }, [id, router]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!form) return;
